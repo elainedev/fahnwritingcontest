@@ -1,0 +1,516 @@
+$poem-color-1: rgb(246, 131, 135);
+$poem-color-2: rgb(255, 73, 122);
+$poem-color-3: rgb(238, 159, 198);
+$poem-color-4: rgb(254, 145, 185);
+$poem-color-5: pink;
+$poem-color-6: rgb(248, 173, 197);
+$poem-color-7: rgb(237, 125, 155);
+$poem-color-8: rgb(248, 155, 155);
+$poem-color-9: rgb(255, 110, 110);
+$poem-color-10: rgb(247, 178, 210);
+$poem-color-11: rgb(216, 145, 240);
+
+// short-story colors
+$story-color-1: rgb(106, 245, 145);
+$story-color-2: rgb(80, 235, 124);
+$story-color-3: rgb(94, 212, 176);
+$story-color-4: rgb(72, 234, 213);
+$story-color-5: rgb(128, 189, 246);
+$story-color-6: rgb(141, 228, 112);
+$story-color-7: rgb(48, 231, 60);
+$story-color-8: rgb(163, 219, 249);
+$story-color-9: rgb(38, 223, 236);
+$story-color-10: rgb(84, 233, 196);
+$story-color-11: rgb(122, 237, 149);
+$story-color-12: rgb(72, 230, 61);
+$story-color-13: rgb(142, 230, 84);
+$story-color-14: rgb(94, 212, 128);
+$story-color-15: rgb(93, 209, 248);
+$story-color-16: rgb(129, 249, 157);
+
+.books-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  perspective: 1500px;
+  margin-left: 24%;
+  margin-bottom: 35px;
+  position: relative;
+
+  .book-item {
+    position: relative;
+    width: 300px;
+    height: 50px;
+    transform-style: preserve-3d;
+    transition: 0.8s;
+    transform: rotateX(-5deg) rotateY(25deg);
+
+    &.poem-8 {
+      height: 135px;
+    }
+
+    &:hover {
+      @media screen and (min-width: 430px) {
+        transform: rotateX(-5deg) rotateY(10deg) translateZ(100px);
+      }
+      @media screen and (max-width: 429px) {
+        transform: rotateX(-5deg) rotateY(2deg) translateZ(50px);
+      }
+    }
+
+    .title {
+      font-size: 1.5em;
+      font-weight: 600;
+      margin: 0;
+      font-style: normal;
+      color: #213547;
+      line-height: 1.1;
+    }
+
+    .side {
+      background-color: gold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .front {
+      width: 280px;
+      height: 50px;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .left {
+      background-image: repeating-linear-gradient(
+        180deg,
+        transparent,
+        transparent 5%,
+        #e5e5e5 5%,
+        #e5e5e5 8%,
+        transparent 8%,
+        transparent 12%,
+        #e5e5e5 12%,
+        #e5e5e5 16%,
+        transparent 16%
+      );
+      height: 50px;
+      width: 180px;
+      background-color: floralwhite !important;
+      transform: rotateY(-90deg) translateZ(90px) translateX(-90px);
+
+      @media (prefers-color-scheme: light) {
+        border-left: 10px solid white;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        border-left: 10px solid rgb(36, 36, 36);
+      }
+    }
+
+    .top,
+    .bottom {
+      width: 280px;
+      height: 180px;
+    }
+
+    .top {
+      // background-color: red;
+      filter: brightness(1.1);
+      transform: rotateX(90deg) translateZ(89px) translateY(-90px);
+      perspective: 5000px;
+    }
+
+    .bottom {
+      filter: brightness(0.9);
+
+      transform: rotateX(270deg) translateZ(-40px) translateY(89px);
+    }
+
+    &.story {
+      .title {
+        font-family: "Courier New", Courier, monospace;
+      }
+      &-1 {
+        z-index: 1;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-1;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-1;
+          border-bottom: 3px solid $story-color-1;
+        }
+      }
+      &-2 {
+        z-index: 2;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-2;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-2;
+          border-bottom: 3px solid $story-color-2;
+        }
+      }
+      &-3 {
+        z-index: 3;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-3;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-3;
+          border-bottom: 3px solid $story-color-3;
+        }
+      }
+      &-4 {
+        z-index: 4;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-4;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-4;
+          border-bottom: 3px solid $story-color-4;
+        }
+      }
+      &-5 {
+        z-index: 5;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-5;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-5;
+          border-bottom: 3px solid $story-color-5;
+        }
+      }
+      &-6 {
+        z-index: 6;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-6;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-6;
+          border-bottom: 3px solid $story-color-6;
+        }
+      }
+      &-7 {
+        z-index: 7;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-7;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-7;
+          border-bottom: 3px solid $story-color-7;
+        }
+      }
+
+      &-8 {
+        z-index: 6;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-8;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-8;
+          border-bottom: 3px solid $story-color-8;
+        }
+      }
+      &-9 {
+        z-index: 5;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-9;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-9;
+          border-bottom: 3px solid $story-color-9;
+        }
+      }
+      &-10 {
+        z-index: 4;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-10;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-10;
+          border-bottom: 3px solid $story-color-10;
+        }
+      }
+      &-11 {
+        z-index: 3;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-11;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-11;
+          border-bottom: 3px solid $story-color-11;
+        }
+      }
+      &-12 {
+        z-index: 2;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-12;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-12;
+          border-bottom: 3px solid $story-color-12;
+        }
+      }
+      &-13 {
+        z-index: 1;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-13;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-13;
+          border-bottom: 3px solid $story-color-13;
+        }
+      }
+      &-14 {
+        z-index: 0;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-14;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-14;
+          border-bottom: 3px solid $story-color-14;
+        }
+      }
+      &-15 {
+        z-index: -1;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-15;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-15;
+          border-bottom: 3px solid $story-color-15;
+        }
+      }
+      &-16 {
+        z-index: -2;
+        .front,
+        .top,
+        .bottom {
+          background-color: $story-color-16;
+        }
+
+        .left {
+          border-top: 3px solid $story-color-16;
+          border-bottom: 3px solid $story-color-16;
+        }
+      }
+    }
+    // specific poem styles
+    &.poem {
+      .title {
+        font-family: Cambria, Cochin, Times, "Times New Roman", serif;
+        font-weight: 400;
+      }
+      &-1 {
+        z-index: 1;
+        .front,
+        .top,
+        .bottom {
+          background-color: $poem-color-1;
+        }
+
+        .left {
+          border-top: 3px solid $poem-color-1;
+          border-bottom: 3px solid $poem-color-1;
+        }
+      }
+
+      &-2 {
+        z-index: 2;
+        .front,
+        .top,
+        .bottom {
+          background-color: $poem-color-2;
+        }
+
+        .left {
+          border-top: 3px solid $poem-color-2;
+          border-bottom: 3px solid $poem-color-2;
+        }
+      }
+      &-3 {
+        z-index: 3;
+        .front,
+        .top,
+        .bottom {
+          background-color: $poem-color-3;
+        }
+
+        .left {
+          border-top: 3px solid $poem-color-3;
+          border-bottom: 3px solid $poem-color-3;
+        }
+      }
+      &-4 {
+        z-index: 4;
+        .front,
+        .top,
+        .bottom {
+          background-color: $poem-color-4;
+        }
+
+        .left {
+          border-top: 3px solid $poem-color-4;
+          border-bottom: 3px solid $poem-color-4;
+        }
+      }
+      &-5 {
+        z-index: 5;
+        .front,
+        .top,
+        .bottom {
+          background-color: $poem-color-5;
+        }
+
+        .left {
+          border-top: 3px solid $poem-color-5;
+          border-bottom: 3px solid $poem-color-5;
+        }
+      }
+      &-6 {
+        z-index: 4;
+        .front,
+        .top,
+        .bottom {
+          background-color: $poem-color-6;
+        }
+
+        .left {
+          border-top: 3px solid $poem-color-6;
+          border-bottom: 3px solid $poem-color-6;
+        }
+      }
+      &-7 {
+        z-index: 3;
+        height: 60px;
+        z-index: 1;
+        .front,
+        .left {
+          height: 60px;
+        }
+        .front,
+        .top,
+        .bottom {
+          background-color: $poem-color-7;
+        }
+
+        .left {
+          border-top: 3px solid $poem-color-7;
+          border-bottom: 3px solid $poem-color-7;
+        }
+      }
+      &-8 {
+        z-index: 0;
+        .front,
+        .left {
+          height: 135px;
+        }
+        .front,
+        .top,
+        .bottom {
+          background-color: $poem-color-8;
+        }
+
+        .left {
+          border-top: 3px solid $poem-color-8;
+          border-bottom: 3px solid $poem-color-8;
+        }
+      }
+      &-9 {
+        z-index: -1;
+        .front,
+        .top,
+        .bottom {
+          background-color: $poem-color-9;
+        }
+
+        .left {
+          border-top: 3px solid $poem-color-9;
+          border-bottom: 3px solid $poem-color-9;
+        }
+      }
+      &-10 {
+        z-index: -2;
+        .front,
+        .top,
+        .bottom {
+          background-color: $poem-color-10;
+        }
+
+        .left {
+          border-top: 3px solid $poem-color-10;
+          border-bottom: 3px solid $poem-color-10;
+        }
+      }
+      &-11 {
+        z-index: -3;
+        .front,
+        .top,
+        .bottom {
+          background-color: $poem-color-11;
+        }
+
+        .left {
+          border-top: 3px solid $poem-color-11;
+          border-bottom: 3px solid $poem-color-11;
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0);
+  }
+  100% {
+    transform: rotateY(-180deg);
+  }
+}

@@ -1,0 +1,136 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: center;
+
+  &.main {
+    margin-top: 30px;
+  }
+
+  h2 {
+    margin: 5px;
+    font-weight: 500;
+
+    &.readers {
+      margin-top: 40px;
+    }
+  }
+
+  h3 {
+    margin: 0 0 10px;
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .randomizer-link {
+    text-decoration: underline;
+    line-height: 1.5;
+  }
+
+  .select-instruction {
+    font-style: italic;
+    margin: 15px 0 5px;
+  }
+
+  button {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: rgb(102, 147, 244); // rgb(94, 94, 175); palevioletred;
+    padding: 16px 3px;
+    margin: 7px auto;
+    min-width: 300px;
+    line-height: 1.5;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &.disabled-btn {
+      cursor: not-allowed;
+      color: lightgray;
+      opacity: 0.7;
+    }
+
+    &.vote {
+      margin-top: 50px;
+    }
+
+    &.shorts {
+      background-color: mediumseagreen;
+    }
+
+    &.poems {
+      // background-color: mediumpurple;
+      background-color: palevioletred;
+    }
+
+    &.filks {
+      background-color: darkorange;
+    }
+
+    .author-in-menu {
+      text-transform: capitalize;
+      font-weight: 300;
+      line-height: 1.05;
+      font-size: 0.85rem;
+      // font-style: italic;
+      opacity: 0.8;
+    }
+  }
+
+  @media screen and (min-width: 600px) {
+    button {
+      width: 500px;
+    }
+  }
+
+  @media screen and (max-width: 599px) {
+    button {
+      max-width: 300px;
+    }
+  }
+}
+
+.addendum {
+  font-style: italic;
+  margin-top: 70px;
+}
+
+.menu-selection-container {
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: center;
+
+  section {
+    margin: 0 5px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    border-radius: 2px;
+    font-size: 0.9rem;
+    // background-color: rgb(251, 202, 112);
+
+    &.active {
+      &.filk {
+        color: darkorange;
+      }
+
+      &.poem {
+        color: palevioletred;
+      }
+
+      &.story {
+        color: rgb(34, 161, 91);
+      }
+    }
+  }
+
+  .menu-type-text {
+    margin: 0 5px;
+  }
+}

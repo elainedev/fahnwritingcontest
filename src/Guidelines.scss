@@ -1,0 +1,23 @@
+.rules {
+  text-align: left;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.no-indent {
+  padding-inline-start: 20px;
+}
+
+.reduce-margin-heading {
+  margin-bottom: 0;
+  font-weight: 600;
+  font-style: italic;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+}

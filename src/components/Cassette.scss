@@ -1,0 +1,156 @@
+.cassette {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  // transform: rotateX(-12deg);
+  // transform: rotateY(50deg) !important;
+  // animation: rotate 9s 3s infinite linear;
+  // animation: rotate 11s infinite linear;
+  transition: 2s;
+
+  &.facing-front {
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
+  &.facing-back {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+
+  .front,
+  .back {
+    width: 300px;
+    height: 195px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 8px;
+    padding: 26px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .left,
+  .right {
+    top: 0;
+    width: 38px;
+    height: 195px;
+    background-color: #303030;
+    border-radius: 8px;
+  }
+
+  .top,
+  .bottom {
+    width: 295px;
+    height: 38px;
+    background-color: #303030;
+    border-radius: 8px;
+  }
+
+  .front {
+    -webkit-transform: translateZ(18px);
+    transform: translateZ(18px);
+    background-image: url("/assets/cassette-tape-yellow.png");
+    position: relative;
+  }
+
+  .back {
+    -webkit-transform: rotateY(180deg) translateZ(20px);
+
+    transform: rotateY(180deg) translateZ(20px);
+    background-image: url("/assets/cassette-tape-blue.png");
+  }
+
+  .left {
+    -webkit-transform: rotateY(-90deg) translateZ(15px);
+    transform: rotateY(-90deg) translateZ(15px);
+  }
+
+  .right {
+    -webkit-transform: rotateY(90deg) translateZ(278px);
+
+    transform: rotateY(90deg) translateZ(278px);
+    // background-color: green;
+  }
+
+  .top {
+    -webkit-transform: rotateX(90deg) translateX(2px) translateY(0px)
+      translateZ(18px);
+    transform: rotateX(90deg) translateX(2px) translateY(0px) translateZ(18px);
+  }
+
+  .bottom {
+    -webkit-transform: rotateX(270deg) translateX(2px) translateY(0px)
+      translateZ(176px);
+    transform: rotateX(270deg) translateX(2px) translateY(0px) translateZ(176px);
+  }
+
+  .universal-logo {
+    display: inline-block;
+  }
+  .top-label {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    text-align: center;
+
+    &.back-label {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .round-sticker {
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+
+    img {
+      position: relative;
+      left: 1px;
+    }
+  }
+
+  .title {
+    font-family: "DS Marker Felt", sans-serif;
+    color: black;
+    font-size: 25px;
+    white-space: nowrap;
+    min-width: 55px;
+  }
+
+  .bottom-label {
+    font-size: 16px;
+    font-family: "Bradley Hand", sans-serif;
+    font-weight: 700;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotateY(0);
+    }
+    100% {
+      transform: rotateY(-180deg);
+    }
+  }
+
+  .flip-icon {
+    position: absolute;
+    right: 8px;
+    bottom: 5px;
+    opacity: 0.8;
+  }
+}
+
+.side {
+  position: absolute;
+}
