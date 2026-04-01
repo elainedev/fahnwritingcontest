@@ -50,15 +50,6 @@ $story-color-16: rgb(129, 249, 157);
       height: 135px;
     }
 
-    &:hover {
-      @media screen and (min-width: 430px) {
-        transform: rotateX(-5deg) rotateY(10deg) translateZ(100px);
-      }
-      @media screen and (max-width: 429px) {
-        transform: rotateX(-5deg) rotateY(2deg) translateZ(50px);
-      }
-    }
-
     .title {
       font-size: 1.5em;
       font-weight: 600;
@@ -116,7 +107,6 @@ $story-color-16: rgb(129, 249, 157);
     }
 
     .top {
-      // background-color: red;
       filter: brightness(1.1);
       transform: rotateX(90deg) translateZ(89px) translateY(-90px);
       perspective: 5000px;
@@ -133,6 +123,7 @@ $story-color-16: rgb(129, 249, 157);
         font-family: "Courier New", Courier, monospace;
       }
       &-1 {
+        transform: rotateX(-5deg) rotateY(18deg);
         z-index: 1;
         .front,
         .top,
@@ -146,6 +137,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-2 {
+        transform: rotateX(-5deg) rotateY(22deg);
         z-index: 2;
         .front,
         .top,
@@ -159,6 +151,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-3 {
+        transform: rotateX(-5deg) rotateY(31deg);
         z-index: 3;
         .front,
         .top,
@@ -172,6 +165,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-4 {
+        transform: rotateX(-5deg) rotateY(19deg);
         z-index: 4;
         .front,
         .top,
@@ -185,6 +179,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-5 {
+        transform: rotateX(-5deg) rotateY(32deg);
         z-index: 5;
         .front,
         .top,
@@ -198,6 +193,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-6 {
+        transform: rotateX(-5deg) rotateY(27deg);
         z-index: 6;
         .front,
         .top,
@@ -211,6 +207,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-7 {
+        transform: rotateX(-5deg) rotateY(20deg);
         z-index: 7;
         .front,
         .top,
@@ -225,6 +222,7 @@ $story-color-16: rgb(129, 249, 157);
       }
 
       &-8 {
+        transform: rotateX(-5deg) rotateY(31deg);
         z-index: 6;
         .front,
         .top,
@@ -238,6 +236,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-9 {
+        transform: rotateX(-5deg) rotateY(24deg);
         z-index: 5;
         .front,
         .top,
@@ -251,6 +250,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-10 {
+        transform: rotateX(-5deg) rotateY(29deg);
         z-index: 4;
         .front,
         .top,
@@ -264,6 +264,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-11 {
+        transform: rotateX(-5deg) rotateY(19deg);
         z-index: 3;
         .front,
         .top,
@@ -277,6 +278,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-12 {
+        transform: rotateX(-5deg) rotateY(24deg);
         z-index: 2;
         .front,
         .top,
@@ -290,6 +292,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-13 {
+        transform: rotateX(-5deg) rotateY(20deg);
         z-index: 1;
         .front,
         .top,
@@ -303,6 +306,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-14 {
+        transform: rotateX(-5deg) rotateY(28deg);
         z-index: 0;
         .front,
         .top,
@@ -316,6 +320,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-15 {
+        transform: rotateX(-5deg) rotateY(23deg);
         z-index: -1;
         .front,
         .top,
@@ -329,6 +334,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-16 {
+        transform: rotateX(-5deg) rotateY(25deg);
         z-index: -2;
         .front,
         .top,
@@ -349,6 +355,7 @@ $story-color-16: rgb(129, 249, 157);
         font-weight: 400;
       }
       &-1 {
+        transform: rotateX(-5deg) rotateY(20deg);
         z-index: 1;
         .front,
         .top,
@@ -363,6 +370,7 @@ $story-color-16: rgb(129, 249, 157);
       }
 
       &-2 {
+        transform: rotateX(-5deg) rotateY(24deg);
         z-index: 2;
         .front,
         .top,
@@ -376,6 +384,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-3 {
+        transform: rotateX(-5deg) rotateY(29deg);
         z-index: 3;
         .front,
         .top,
@@ -389,6 +398,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-4 {
+        transform: rotateX(-5deg) rotateY(21deg);
         z-index: 4;
         .front,
         .top,
@@ -402,6 +412,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-5 {
+        transform: rotateX(-5deg) rotateY(27deg);
         z-index: 5;
         .front,
         .top,
@@ -415,6 +426,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-6 {
+        transform: rotateX(-5deg) rotateY(22deg);
         z-index: 4;
         .front,
         .top,
@@ -428,6 +440,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-7 {
+        transform: rotateX(-5deg) rotateY(16deg);
         z-index: 3;
         height: 60px;
         z-index: 1;
@@ -447,6 +460,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-8 {
+        transform: rotateX(-5deg) rotateY(18deg) translateX(-10px);
         z-index: 0;
         .front,
         .left {
@@ -464,6 +478,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-9 {
+        transform: rotateX(-5deg) rotateY(19deg);
         z-index: -1;
         .front,
         .top,
@@ -477,6 +492,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-10 {
+        transform: rotateX(-5deg) rotateY(21deg);
         z-index: -2;
         .front,
         .top,
@@ -490,6 +506,7 @@ $story-color-16: rgb(129, 249, 157);
         }
       }
       &-11 {
+        transform: rotateX(-5deg) rotateY(17deg) translateX(-15px);
         z-index: -3;
         .front,
         .top,
@@ -501,6 +518,15 @@ $story-color-16: rgb(129, 249, 157);
           border-top: 3px solid $poem-color-11;
           border-bottom: 3px solid $poem-color-11;
         }
+      }
+    }
+
+    &:hover {
+      @media screen and (min-width: 430px) {
+        transform: rotateX(-5deg) rotateY(10deg) translateZ(100px);
+      }
+      @media screen and (max-width: 429px) {
+        transform: rotateX(-5deg) rotateY(2deg) translateZ(50px);
       }
     }
   }
